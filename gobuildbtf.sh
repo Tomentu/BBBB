@@ -1,0 +1,15 @@
+echo "#################################################";
+echo "		Bitcoin Finance - BTF Network Build	";
+echo "#################################################";
+echo "-> make clean";
+make clean;
+echo "Bitcoin Finance - BTF Network Build - make clean finished!";
+echo "Bitcoin Finance - BTF Network Build -> autogen start";
+./autogen.sh;
+echo "Bitcoin Finance - BTF Network Build - autogen finished!";
+./configure   --with-incompatible-bdb;
+echo "Bitcoin Finance - BTF Network Build -> make start";
+make  -j16;
+echo "#################################################";
+echo "Bitcoin Finance - BTF Network Build - make finished!";
+echo "#################################################";
